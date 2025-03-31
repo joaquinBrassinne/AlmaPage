@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/nunito-sans':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/patua-one':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.17
         version: 4.0.17(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2))
@@ -348,6 +354,12 @@ packages:
   '@eslint/plugin-kit@0.2.7':
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/nunito-sans@5.2.5':
+    resolution: {integrity: sha512-J8Bi9OBUQvXwDvt9QofXD4joorYy3O9+4AU7cPx/ioa+xlH4HjAJNhA/N+nCu7IOMjFsbEbM2ZZCWQrsmQMsQw==}
+
+  '@fontsource/patua-one@5.2.5':
+    resolution: {integrity: sha512-At3kGQzB9JZKrfI1b8DZAvBWXGpLlKfz2H+/T/cZXSiUk7FbUM9SyFXXwzw/oRuLE+ls5/EYHEqYCxlJjQEuTg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1539,6 +1551,10 @@ snapshots:
     dependencies:
       '@eslint/core': 0.12.0
       levn: 0.4.1
+
+  '@fontsource-variable/nunito-sans@5.2.5': {}
+
+  '@fontsource/patua-one@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 

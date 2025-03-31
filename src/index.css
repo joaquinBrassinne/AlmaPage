@@ -1,3 +1,5 @@
+@import "@fontsource/patua-one/index.css";
+@import "@fontsource-variable/nunito-sans/index.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -110,11 +112,29 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Custom config */
+
+@theme {
+  /* Colors */
+  --color-primary: #BF562E;
+  --color-secondary: #57737A;
+  --color-tertiary: #2D2851;
+  --color-accent: #0B6E4F;
+  --color-whitebg: #F5F2EE;
+  /* Fonts */
+  --font-nunito: "Nunito Sans", sans-serif;
+  --font-patua: "Patua One", cursive;
+}
+
+/* Default settings */
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
+    font-family: var(--font-sans);
     @apply bg-background text-foreground;
   }
 }
+
