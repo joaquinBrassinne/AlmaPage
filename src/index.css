@@ -138,3 +138,11 @@
   }
 }
 
+/* Main div settings */
+
+@layer utilities{
+  .mainContainer{
+    @apply bg-whitebg h-screen m-5 rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 md:mx-[50px] md:p-5 xl:mx-[250px]
+  }
+}
+
