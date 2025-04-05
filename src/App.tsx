@@ -1,16 +1,13 @@
-
-import './index.css'
+import NavBar from "./components/NavBar/NavBar";
+import "./index.css";
 
 function App() {
-
-
   return (
-    <div className="mainContainer">
-      <h1 className="text-3xl font-nunito text-accent">
-        Hello world!
-      </h1>
-    </div>
-  )
+    <>
+      <NavBar />
+      <div className="mainContainer"></div>
+    </>
+  );
 }
 
-export default App
+export default App;
