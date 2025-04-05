@@ -180,12 +180,26 @@
   }
 
   /* QUIENES SOMOS */
-  .QuienesSomos {
+  .Titulos {
     font-family: var(--font-patua);
     @apply bg-primary w-full items-center flex justify-center text-whitebg h-[60px] text-xl md:text-[28px] xl:text-[32px];
   }
   .QuienesSomosParrafo {
     font-family: var(--font-nunito);
     @apply text-[12px] md:text-[20px] xl:text-[22px];
+  }
+
+  /* SERVICIOS */
+  .IconosContainer {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-[10px] max-w-md md:max-w-3xl px-[20px] py-[10px] xl:px-[56px];
+  }
+  .IconoServicio {
+    @apply flex items-center gap-2 px-[5px] py-[10px];
+  }
+  .IconoSvg {
+    @apply w-6 h-6 md:w-8 md:h-8 xl:w-9 xl:h-9;
+  }
+  .DescripcionIcono {
+    @apply text-[12px] md:text-[13px] xl:text-[16px] font-medium;
   }
 }
