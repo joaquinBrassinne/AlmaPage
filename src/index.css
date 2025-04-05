@@ -116,11 +116,11 @@
 
 @theme {
   /* Colors */
-  --color-primary: #BF562E;
-  --color-secondary: #57737A;
-  --color-tertiary: #2D2851;
-  --color-accent: #0B6E4F;
-  --color-whitebg: #F5F2EE;
+  --color-primary: #bf562e;
+  --color-secondary: #57737a;
+  --color-tertiary: #2d2851;
+  --color-accent: #0b6e4f;
+  --color-whitebg: #f5f2ee;
   /* Fonts */
   --font-nunito: "Nunito Sans", sans-serif;
   --font-patua: "Patua One", cursive;
@@ -140,9 +140,31 @@
 
 /* Main div settings */
 
-@layer utilities{
-  .mainContainer{
-    @apply bg-whitebg h-screen m-5 rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 md:mx-[50px] md:p-5 xl:mx-[250px]
+@layer utilities {
+  .mainContainer {
+    @apply bg-whitebg h-screen m-5 rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 md:mx-[50px] md:p-5 xl:mx-[250px];
+  }
+
+  /* NavBar */
+  .NavigationMenu {
+    @apply bg-primary max-w-full text-whitebg;
+  }
+  .NavigationMenuList {
+    @apply w-full flex justify-between px-[10px];
+  }
+  .LogoAlma {
+    @apply p-0 w-[60px] !bg-transparent;
+  }
+  .TrigerMenu {
+    @apply p-0 m-0 !bg-transparent hover:!bg-transparent focus:!bg-transparent active:!bg-transparent data-[state=open]:!bg-transparent shadow-none ring-0 outline-none transition-none [&>svg:last-child]:hidden;
+  }
+  .botonMenu {
+    @apply text-white transition-transform duration-200 ease-in-out group-hover:scale-110 group-active:scale-125 w-7 h-7;
+  }
+  .MenuAbierto {
+    @apply absolute right-0 top-13 p-2 z-50 bg-white rounded-md w-max whitespace-nowrap shadow-md;
+  }
+  .OpcionMenu {
+    @apply block text-black w-full text-left px-4 py-2 hover:bg-gray-300;
   }
 }
-
