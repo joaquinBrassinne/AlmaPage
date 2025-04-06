@@ -10,13 +10,11 @@ import { Menu } from "lucide-react";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  // Referencia al menú desplegable
 
   const handleOptionClick = () => {
     setIsOpen(false); // Cierra el menú al seleccionar una opción
   };
 
-  // Cierra el menú si se hace clic fuera de él
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -33,6 +31,7 @@ const NavBar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   return (
     <NavigationMenu className="NavigationMenu">
       <div className="w-full">
@@ -44,8 +43,8 @@ const NavBar = () => {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          {/* Menú hamburguesa (solo en mobile) */}
-          <NavigationMenuItem className="md:hidden flex ">
+          {/* Menú hamburguesa (mobile) */}
+          <NavigationMenuItem className="md:hidden flex">
             <button onClick={() => setIsOpen(!isOpen)}>
               <Menu className="w-6 h-6" />
             </button>
@@ -55,42 +54,46 @@ const NavBar = () => {
                 <ul>
                   <li>
                     <NavigationMenuLink asChild>
-                      <button
+                      <a
+                        href="#quienes-somos"
                         className="OpcionMenu"
                         onClick={handleOptionClick}
                       >
                         Quienes somos
-                      </button>
+                      </a>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <button
+                      <a
+                        href="#ubicacion"
                         className="OpcionMenu"
                         onClick={handleOptionClick}
                       >
                         Ubicacion
-                      </button>
+                      </a>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <button
+                      <a
+                        href="#servicios"
                         className="OpcionMenu"
                         onClick={handleOptionClick}
                       >
                         Servicios
-                      </button>
+                      </a>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <button
+                      <a
+                        href="#instalaciones"
                         className="OpcionMenu"
                         onClick={handleOptionClick}
                       >
                         Instalaciones
-                      </button>
+                      </a>
                     </NavigationMenuLink>
                   </li>
                 </ul>
@@ -98,19 +101,19 @@ const NavBar = () => {
             )}
           </NavigationMenuItem>
 
-          {/* Menú horizontal (solo en desktop) */}
+          {/* Menú desktop */}
           <NavigationMenuItem className="hidden md:flex gap-1 items-center">
             <NavigationMenuLink asChild className="!bg-transparent">
-              <div>Quienes somos</div>
+              <a href="#quienes-somos">Quienes somos</a>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="!bg-transparent">
-              <div>Ubicacion</div>
+              <a href="#ubicacion">Ubicacion</a>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="!bg-transparent">
-              <div>Servicios</div>
+              <a href="#servicios">Servicios</a>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="!bg-transparent">
-              <div>Instalaciones</div>
+              <a href="#instalaciones">Instalaciones</a>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>

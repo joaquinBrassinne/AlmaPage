@@ -13,19 +13,21 @@ const servicios = [
 
 export default function Servicios() {
   return (
-    <>
+    <section id="servicios" className="sectionService">
       <h1 className="Titulos">Servicios</h1>
 
       <div className="IconosContainer">
         {servicios.map((servicio, idx) => (
           <div key={idx} className="IconoServicio">
-            <img src={servicio.icon} alt={servicio.label} className="IconoSvg" />
-            <span className="DescripcionIcono">
-              {servicio.label}
-            </span>
+            <img
+              src={servicio.icon}
+              alt={servicio.label}
+              className="IconoSvg"
+            />
+            <span className="DescripcionIcono">{servicio.label}</span>
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 }

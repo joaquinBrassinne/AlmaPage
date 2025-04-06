@@ -3,6 +3,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -169,14 +174,14 @@
   }
 
   /* Carousel */
-  .cardTransparent{
-    @apply bg-transparent border-none p-0
+  .cardTransparent {
+    @apply bg-transparent border-none p-0;
   }
-  .carouselItems{
-    @apply flex items-center justify-center p-0
+  .carouselItems {
+    @apply flex items-center justify-center p-0;
   }
-  .carouselImgAspect{
-    @apply w-full aspect-video object-cover
+  .carouselImgAspect {
+    @apply w-full aspect-video object-cover;
   }
 
   /* QUIENES SOMOS */
@@ -190,6 +195,9 @@
   }
 
   /* SERVICIOS */
+  .sectionService {
+    @apply w-full flex justify-center flex-col items-center;
+  }
   .IconosContainer {
     @apply grid grid-cols-2 md:grid-cols-4 gap-[10px] max-w-md md:max-w-3xl px-[20px] py-[10px] xl:px-[56px];
   }
@@ -201,5 +209,24 @@
   }
   .DescripcionIcono {
     @apply text-[12px] md:text-[13px] xl:text-[16px] font-medium;
+  }
+
+  /* INSTALACIONES */
+  .InstalacionesContainer {
+    @apply w-full flex flex-col items-center justify-center gap-2.5 md:gap-5;
+  }
+  .TituloYbotonContainer {
+    @apply absolute inset-0 flex flex-col items-center justify-center text-whitebg;
+  }
+  .TituloInstalaciones {
+    font-family: var(--font-nunito);
+    text-shadow: -1px -1px 0 #444444, 1px -1px 0 #444444, -1px 1px 0 #444444,
+      1px 1px 0 #444444;
+    @apply text-[24px] font-bold mb-2.5 md:text-[28px] xl:text-[34px];
+  }
+  .BotonInstalaciones {
+    font-family: var(--font-patua);
+    background-color: var(--color-secondary);
+    @apply text-white rounded-[10px] p-2.5 w-[150px] text-[14px] md:text-[18px] xl:text-[20px];
   }
 }
