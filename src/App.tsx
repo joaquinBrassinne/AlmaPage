@@ -1,4 +1,5 @@
 import CarouselCard from "./components/CarouselCard/CarouselCard";
+import Instalaciones from "./components/Instalaciones/Instalaciones";
 import NavBar from "./components/NavBar/NavBar";
 import QuienesSomos from "./components/QuienesSomos/QuienesSomos";
 import Servicios from "./components/Servicios/Servicios";
@@ -14,6 +15,7 @@ function App() {
         <CarouselCard imgList={bannerImg} range={3000} />
         <QuienesSomos />
         <Servicios />
+        <Instalaciones/>
       </div>
     </>
   );
