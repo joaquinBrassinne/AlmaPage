@@ -196,7 +196,7 @@ html {
 
   /* SERVICIOS */
   .sectionService {
-    @apply w-full flex justify-center flex-col items-center;
+    @apply w-full flex justify-center flex-col items-center gap-4;
   }
   .IconosContainer {
     @apply grid grid-cols-2 md:grid-cols-4 gap-[10px] max-w-md md:max-w-3xl px-[20px] py-[10px] xl:px-[56px];
@@ -229,4 +229,32 @@ html {
     background-color: var(--color-secondary);
     @apply text-white rounded-[10px] p-2.5 w-[150px] text-[14px] md:text-[18px] xl:text-[20px];
   }
+
+  /* UBICACION */
+
+  .Ubicacion-section{
+    @apply flex flex-row gap-12 w-full
+  }
+
+  .Mapa{
+    @apply w-3/4 p-2 md:p-4
+  }
+
+  .Resenias{
+    @apply w-1/4 flex items-center justify-center p-2 md:p-4
+  }
+
+  .Resenias-reviews{
+    @apply flex flex-col items-center p-4 hover:bg-gray-100 rounded-lg transition-colors
+  }
+
+  .Icono-map{
+    @apply w-12 h-12 md:w-16 md:h-16
+  }
+
+  .Text-resenias{
+    @apply text-sm mt-2 md:text-base font-medium
+  }
+
+ 
 }
