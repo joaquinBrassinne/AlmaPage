@@ -257,4 +257,30 @@ html {
   }
 
  
+  /* CANTINA */
+  .CantinaContainer {
+    font-family: var(--font-nunito);
+    @apply w-full flex flex-col items-center justify-center p-2.5 gap-2.5;
+  }
+  .cantinaTetx {
+    @apply text-[14px] md:text-[20px] xl:text-[24px];
+  }
+  .HoraAtencionContainer {
+    @apply w-full flex flex-col justify-center items-center p-2.5 gap-2.5;
+  }
+  .iconoReloj {
+    @apply w-[28px] h-[28px] md:w-[32px] md:h-[32px] xl:w-[36px] xl:h-[36px];
+  }
+  .HoraAtencion {
+    @apply text-[14px] md:text-[20px] xl:text-[24px];
+  }
+  .BotonSombra {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .AdvertenciaCarta {
+    @apply text-[10px]  md:text-[16px] xl:text-[18px];
+  }
+  .porConsultas {
+    @apply text-[14px] md:text-[20px] xl:text-[24px] text-center;
+  }
 }

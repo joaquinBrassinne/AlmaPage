@@ -17,7 +17,7 @@ function App() {
         <QuienesSomos />
         <Ubicacion/>
         <Servicios />
-        <Instalaciones/>
+        <Instalaciones />
       </div>
     </>
   );
