@@ -1,3 +1,4 @@
+import BotonFlotante from "./components/BotonFlotanteWPP/BotonFlotante";
 import CarouselCard from "./components/CarouselCard/CarouselCard";
 import Instalaciones from "./components/Instalaciones/Instalaciones";
 import NavBar from "./components/NavBar/NavBar";
@@ -18,6 +19,7 @@ function App() {
         <Ubicacion/>
         <Servicios />
         <Instalaciones />
+        <BotonFlotante/>
       </div>
     </>
   );

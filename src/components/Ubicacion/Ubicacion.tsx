@@ -18,7 +18,7 @@ const Ubicacion = () => {
                 </div>
                 <div className='Resenias'>
                     <a 
-                        href="https://www.google.com/maps/place/Camping+Balneario+Almafuerte/reviews" 
+                        href="https://www.google.com/search?q=balneario+almafuerte&oq=&gs_lcrp=EgZjaHJvbWUqCQgGECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQsxMzk3NzI2ajBqN6gCCLACAfEFYHuRUkT0Ye0&sourceid=chrome&ie=UTF-8#wptab=si:APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzfMakrXbnw6AHJkaps6kMm0Q_0qc_EgyXSWTekEs3ntQRq15CyxRcO45USTf_kwcWZLN-eiV8hQ_tFzHNtpR9ZgN3ddfEw4ZLiheKX8EMM2_P4qMDA%3D%3D" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className='Resenias-reviews'
