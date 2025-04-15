@@ -1,3 +1,4 @@
+import BotonFlotanteContact from "./components/BotonFlotanteContact/BotonFlotanteContact";
 import BotonFlotante from "./components/BotonFlotanteWPP/BotonFlotante";
 import CarouselCard from "./components/CarouselCard/CarouselCard";
 import Instalaciones from "./components/Instalaciones/Instalaciones";
@@ -20,6 +21,7 @@ function App() {
         <Servicios />
         <Instalaciones />
         <BotonFlotante/>
+        <BotonFlotanteContact/>
       </div>
     </>
   );

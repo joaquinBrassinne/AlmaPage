@@ -293,4 +293,33 @@ html {
   .Icono-wpp{
     @apply w-8 h-8 text-white
   }
+
+  /*BOTON FLOTANTE DE CONTACTO*/
+
+  .Boton-flotante-contacto{
+    @apply fixed bottom-1 left-1/2 transform -translate-x-1/2 z-50
+  }
+
+  .Contenedor-degradado{
+    @apply bg-gradient-to-b from-white to-white/80 py-3 px-4 rounded-full shadow-lg
+  }
+
+  .Separacion-iconos{
+    @apply flex gap-3
+  }
+
+  .Boton-instagram{
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  }
+
+  .Boton-email{
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  }
+
+  .Boton-telefono{
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  }
+
+
+
 }
