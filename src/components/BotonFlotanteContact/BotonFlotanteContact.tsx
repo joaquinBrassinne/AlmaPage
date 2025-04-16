@@ -9,7 +9,7 @@ const contactInfo = {
   };
   
    
-  const tertiaryColorClass = "text-indigo-700";
+  const tertiaryColorClass = "text-tertiary";
 
   return (
     <div className="Boton-flotante-contacto">

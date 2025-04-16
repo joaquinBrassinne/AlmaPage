@@ -12,7 +12,7 @@ function DotButton({ selected, onClick }: DotButtonProps) {
     <button
       onClick={onClick}
       className={cn(
-        "w-2 h-2 rounded-full transition-colors",
+        "w-2 h-2 rounded-full transition-colors hover:cursor-pointer",
         selected ? "bg-black" : "bg-gray-400"
       )}
       aria-label="Go to slide"
@@ -49,7 +49,7 @@ function CarouselDots({ className }: { className?: string }) {
   }
 
   return (
-    <div className={cn("flex justify-center gap-2 mt-4", className)}>
+    <div className={cn("flex justify-center gap-2 mt-1", className)}>
       {scrollSnaps.map((_, index) => (
         <DotButton
           key={index}

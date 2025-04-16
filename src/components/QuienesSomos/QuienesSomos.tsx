@@ -3,7 +3,7 @@ import React from "react";
 export default function QuienesSomos() {
   return (
     <>
-      <section id="quienes-somos">
+      <section id="quienes-somos" className="InstalacionesContainer">
         <h1 className="Titulos">Quienes Somos</h1>
 
         <p className="QuienesSomosParrafo">
