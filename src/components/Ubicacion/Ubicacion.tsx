@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ubicacion = () => {
     return (
-        <section className='sectionService'>
+        <section className='sectionService' id='ubicacion'>
             <h1 className='Titulos'>Ubicacion</h1>
             <div className='Ubicacion-section'>
                 <div className='Mapa'>
@@ -11,7 +11,7 @@ const Ubicacion = () => {
                         width="100%" 
                         height="200"
                         // className="md:h-64 border-2 border-gray-200 rounded-lg" 
-                        allowFullScreen="" 
+                        // allowFullScreen="" 
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade">
                     </iframe>

@@ -51,7 +51,7 @@ const NavBar = () => {
 
             {isOpen && (
               <div ref={menuRef} className="MenuAbierto">
-                <ul>
+                <ul className="font-patua">
                   <li>
                     <NavigationMenuLink asChild>
                       <a
@@ -102,7 +102,7 @@ const NavBar = () => {
           </NavigationMenuItem>
 
           {/* Menú desktop */}
-          <NavigationMenuItem className="hidden md:flex gap-1 items-center">
+          <NavigationMenuItem className="hidden md:flex gap-1 items-center font-patua">
             <NavigationMenuLink asChild className="!bg-transparent">
               <a href="#quienes-somos">Quienes somos</a>
             </NavigationMenuLink>
