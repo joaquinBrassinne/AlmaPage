@@ -9,10 +9,10 @@ import { Menu } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef<HTMLLIElement>(null);
 
   const handleOptionClick = () => {
-    setIsOpen(false); // Cierra el menú al seleccionar una opción
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -44,13 +44,13 @@ const NavBar = () => {
           </NavigationMenuItem>
 
           {/* Menú hamburguesa (mobile) */}
-          <NavigationMenuItem className="md:hidden flex">
+          <NavigationMenuItem className="md:hidden flex" ref={menuRef}>
             <button onClick={() => setIsOpen(!isOpen)}>
               <Menu className="w-6 h-6" />
             </button>
 
             {isOpen && (
-              <div ref={menuRef} className="MenuAbierto">
+              <div className="MenuAbierto">
                 <ul className="font-patua">
                   <li>
                     <NavigationMenuLink asChild>
