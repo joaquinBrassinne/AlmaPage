@@ -199,8 +199,9 @@ html {
     @apply w-full flex justify-center flex-col items-center gap-4;
   }
   .IconosContainer {
-    @apply grid grid-cols-2 md:grid-cols-4 gap-[10px] max-w-md md:max-w-3xl px-[20px] py-[10px] xl:px-[56px];
+    @apply grid grid-cols-2 md:grid-cols-4 gap-[10px] max-w-6xl px-[20px] py-[10px] xl:px-[56px];
   }
+  
   .IconoServicio {
     @apply flex items-center gap-2 px-[5px] py-[10px];
   }

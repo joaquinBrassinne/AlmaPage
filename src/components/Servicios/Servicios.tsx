@@ -1,32 +1,36 @@
 import React from "react";
+import { Tent, Utensils, CarFront , Wifi, Bath, Droplet, Waves, Flame } from "lucide-react";
 
 const servicios = [
-  { icon: "/icons/camping.svg", label: "Camping" },
-  { icon: "/icons/cantina.svg", label: "Cantina" },
-  { icon: "/icons/estacionamiento.svg", label: "Estacionamiento" },
-  { icon: "/icons/wifi.svg", label: "WiFi" },
-  { icon: "/icons/baños.svg", label: "Baños" },
-  { icon: "/icons/pileta.svg", label: "Pileta" },
-  { icon: "/icons/accesorio.svg", label: "Acceso al Río" },
-  { icon: "/icons/churrasqueras.svg", label: "Asadores" },
+  { icon: Tent, label: "Camping" },
+  { icon: Utensils, label: "Cantina" },
+  { icon: CarFront , label: "Estacionamiento" },
+  { icon: Wifi, label: "WiFi" },
+  { icon: Bath, label: "Baños" },
+  { icon: Droplet, label: "Pileta" },
+  { icon: Waves, label: "Acceso al Río" },
+  { icon: Flame, label: "Asadores" },
 ];
 
 export default function Servicios() {
   return (
     <section id="servicios" className="sectionService">
-      <h1 className="Titulos">Servicios</h1>
+      <h2 className="Titulos">Servicios</h2>
 
       <div className="IconosContainer">
-        {servicios.map((servicio, idx) => (
-          <div key={idx} className="IconoServicio">
-            <img
-              src={servicio.icon}
-              alt={servicio.label}
-              className="IconoSvg"
-            />
-            <span className="DescripcionIcono">{servicio.label}</span>
-          </div>
-        ))}
+        {servicios.map((servicio, idx) => {
+          const IconComponent = servicio.icon;
+          return (
+            <div key={idx} className="IconoServicio">
+              <IconComponent 
+                size={24} 
+                color="#000000" 
+                className="IconoSvg"
+              />
+              <span className="DescripcionIcono">{servicio.label}</span>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
