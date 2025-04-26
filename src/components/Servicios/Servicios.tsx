@@ -14,7 +14,7 @@ const servicios = [
 export default function Servicios() {
   return (
     <section id="servicios" className="sectionService">
-      <h1 className="Titulos">Servicios</h1>
+      <h2 className="Titulos">Servicios</h2>
 
       <div className="IconosContainer">
         {servicios.map((servicio, idx) => (
