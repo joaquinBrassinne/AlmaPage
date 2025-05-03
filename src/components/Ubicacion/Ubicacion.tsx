@@ -3,7 +3,7 @@ import React from 'react'
 const Ubicacion = () => {
     return (
         <section className='sectionService' id='ubicacion'>
-            <h1 className='Titulos'>Ubicacion</h1>
+            <h2 className='Titulos'>Ubicacion</h2>
             <div className='Ubicacion-section'>
                 <div className='Mapa'>
                     <iframe 
