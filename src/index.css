@@ -1,0 +1,337 @@
+@import "@fontsource/patua-one/index.css";
+@import "@fontsource-variable/nunito-sans/index.css";
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Custom config */
+
+@theme {
+  /* Colors */
+  --color-primary: #bf562e;
+  --color-secondary: #57737a;
+  --color-tertiary: #2d2851;
+  --color-accent: #0b6e4f;
+  --color-whitebg: #f5f2ee;
+  /* Fonts */
+  --font-nunito: "Nunito Sans", sans-serif;
+  --font-patua: "Patua One", cursive;
+}
+
+/* Default settings */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    font-family: var(--font-sans);
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Main div settings */
+
+@layer utilities {
+  .mainContainer {
+    @apply place-self-center bg-whitebg h-auto m-5  rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 md:max-w-2xl md:p-5 xl:max-w-5xl overflow-y-auto;
+  }
+
+  /* NavBar */
+  .NavigationMenu {
+    @apply bg-primary max-w-full text-whitebg sticky top-0 z-50;
+  }
+  .NavigationMenuList {
+    @apply w-full flex justify-between px-[10px];
+  }
+  .LogoAlma {
+    @apply p-0 w-[60px] !bg-transparent;
+  }
+  .TrigerMenu {
+    @apply p-0 m-0 !bg-transparent hover:!bg-transparent focus:!bg-transparent active:!bg-transparent data-[state=open]:!bg-transparent shadow-none ring-0 outline-none transition-none [&>svg:last-child]:hidden;
+  }
+  .botonMenu {
+    @apply text-white transition-transform duration-200 ease-in-out group-hover:scale-110 group-active:scale-125 w-7 h-7;
+  }
+  .MenuAbierto {
+    @apply absolute right-0 top-13 p-2 z-50 bg-white rounded-md w-max whitespace-nowrap shadow-md;
+  }
+  .OpcionMenu {
+    @apply block text-black w-full text-left px-4 py-2 hover:bg-gray-300;
+  }
+
+  /* Carousel */
+  .cardTransparent {
+    @apply bg-transparent border-none p-0;
+  }
+  .carouselItems {
+    @apply flex items-center justify-center p-0;
+  }
+  .carouselImgAspect {
+    @apply w-full aspect-video object-cover;
+  }
+
+  /* QUIENES SOMOS */
+  .Titulos {
+    font-family: var(--font-patua);
+    @apply bg-primary w-full items-center flex justify-center text-whitebg h-[60px] text-xl md:text-[28px] xl:text-[32px];
+  }
+  .QuienesSomosParrafo {
+    font-family: var(--font-nunito);
+    @apply text-[12px] md:text-[20px] xl:text-[22px];
+  }
+
+  /* SERVICIOS */
+  .sectionService {
+    @apply w-full flex justify-center flex-col items-center gap-4;
+  }
+  .IconosContainer {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-[10px] max-w-6xl px-[20px] py-[10px] xl:px-[56px];
+  }
+  
+  .IconoServicio {
+    @apply flex items-center gap-2 px-[5px] py-[10px];
+  }
+  .IconoSvg {
+    @apply w-6 h-6 md:w-8 md:h-8 xl:w-9 xl:h-9;
+  }
+  .DescripcionIcono {
+    @apply text-[12px] md:text-[13px] xl:text-[16px] font-medium;
+  }
+
+  /* INSTALACIONES */
+  .InstalacionesContainer {
+    @apply w-full flex flex-col items-center justify-center gap-2.5 md:gap-5;
+  }
+  .TituloYbotonContainer {
+    @apply absolute inset-0 flex flex-col items-center justify-center text-whitebg;
+  }
+  .TituloInstalaciones {
+    text-shadow: -1px -1px 0 #444444, 1px -1px 0 #444444, -1px 1px 0 #444444,
+      1px 1px 0 #444444;
+    @apply text-[24px] font-bold mb-2.5 md:text-[28px] xl:text-[34px] font-nunito;
+  }
+  .BotonInstalaciones {
+    @apply text-white rounded-[10px] p-2.5 w-[150px] text-[14px] md:text-[18px] xl:text-[20px] font-patua bg-secondary hover:cursor-pointer;
+  }
+
+  /* UBICACION */
+
+  .Ubicacion-section{
+    @apply flex flex-row gap-12 w-full
+  }
+
+  .Mapa{
+    @apply w-3/4 p-2 md:p-4
+  }
+
+  .Resenias{
+    @apply w-1/4 flex items-center justify-center p-2 md:p-4
+  }
+
+  .Resenias-reviews{
+    @apply flex flex-col items-center p-4 hover:bg-gray-100 rounded-lg transition-colors
+  }
+
+  .Icono-map{
+    @apply w-12 h-12 md:w-16 md:h-16
+  }
+
+  .Text-resenias{
+    @apply text-sm mt-2 md:text-base font-medium
+  }
+
+ 
+  /* CANTINA */
+  .CantinaContainer {
+    font-family: var(--font-nunito);
+    @apply w-full flex flex-col items-center justify-center p-2.5 gap-2.5;
+  }
+  .cantinaTetx {
+    @apply text-[14px] md:text-[16px] xl:text-[18px];
+  }
+  .HoraAtencionContainer {
+    @apply w-full flex flex-col justify-center items-center p-2.5 gap-2.5;
+  }
+  .iconoReloj {
+    @apply w-[28px] h-[28px] md:w-[32px] md:h-[32px] xl:w-[36px] xl:h-[36px];
+  }
+  .HoraAtencion {
+    @apply flex items-center gap-2 text-[14px] md:text-[16px];
+  }
+  .BotonSombra {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .AdvertenciaCarta {
+    @apply text-[10px]  md:text-[16px] xl:text-[20px];
+  }
+  .porConsultas {
+    @apply text-[14px] md:text-[16px] xl:text-[20px] text-center;
+  }
+
+  /*BOTON FLOTANTE WPP*/
+  .Boton-flotante{
+    @apply fixed bottom-1 right-0 
+    z-50 flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300
+  }
+
+  .Icono-wpp{
+    @apply w-8 h-8 text-white
+  }
+
+  /*BOTON FLOTANTE DE CONTACTO*/
+
+  .Boton-flotante-contacto{
+    @apply fixed bottom-1 left-1/2 transform -translate-x-1/2 z-50
+  }
+
+  .Contenedor-degradado{
+    @apply bg-gradient-to-b from-white to-white/80 py-3 px-4 rounded-full shadow-lg
+  }
+
+  .Separacion-iconos{
+    @apply flex gap-3
+  }
+
+  .Boton-instagram{
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  }
+
+  .Boton-email{
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  }
+
+  .Boton-telefono{
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  }
+
+  /* PopUp */
+  .popupContainer{
+    @apply place-self-center max-w-sm md:max-w-2xl xl:max-w-4xl
+  }
+  .popChildContainer{
+    @apply flex flex-col gap-2.5 items-center w-full overflow-y-auto
+  }
+
+  /* iconspan */
+  .iconSpan{
+    @apply flex gap-2.5 items-center justify-start text-tertiary font-nunito
+  }
+  .iconSize{
+    @apply size-6 md:size-8 xl:size-9
+  }
+
+}
