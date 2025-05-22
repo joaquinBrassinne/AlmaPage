@@ -237,9 +237,14 @@ html {
     @apply w-3/4 p-2 md:p-4
   }
 
+  .Animacion-mapa{
+    @apply transition-transform duration-300 hover:scale-105 active:scale-105 touch-pan-y
+  }
+
   .Resenias{
     @apply w-1/4 flex items-center justify-center p-2 md:p-4
   }
+  
 
   .Resenias-reviews{
     @apply flex flex-col items-center p-4 hover:bg-gray-100 rounded-lg transition-colors
@@ -251,6 +256,10 @@ html {
 
   .Text-resenias{
     @apply text-sm mt-2 md:text-base font-medium
+  }
+
+  .Pulsacio-usuarios-moviles{
+    @apply text-xs text-center text-gray-400 mt-2 md:hidden
   }
 
  
