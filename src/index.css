@@ -306,7 +306,7 @@ html {
 
   /*BOTON FLOTANTE WPP*/
   .Boton-flotante {
-    @apply fixed bottom-1 right-0 
+    @apply fixed bottom-1 right-6 
     z-50 flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300;
   }
 

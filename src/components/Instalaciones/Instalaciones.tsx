@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import CampingModal from "./CampingModal/CampingModal";
 import Cantina from "../Cantina/Cantina";
 
