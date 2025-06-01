@@ -1,0 +1,16 @@
+interface IconProps {
+    color?: string;
+    width?: number;
+    height?: number;
+}
+
+const CampingIcon = ({ color = "black", width = 25, height = 24 }:IconProps) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5 15.5H19.5L11.5 1.25L3.5 15.5H1.5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M1.5 18.5H21.5M7 9.5C7 9.5 9.5 7.5 11.5 7.5C13.5 7.5 16 9.5 16 9.5M11.5 13.5C10.1195 13.5 9 15.291 9 17.5V18.5H14V17.5C14 15.291 12.8805 13.5 11.5 13.5ZM19.5 1L18.5 2.5L19.5 4L20.5 2.5L19.5 1ZM3 6.5L2.5 7.5L3 8.5L3.5 7.5L3 6.5Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+export default CampingIcon

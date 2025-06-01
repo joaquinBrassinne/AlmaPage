@@ -6,7 +6,7 @@ import { Clock, PawPrint, ShowerHead, Volume2, Zap } from 'lucide-react'
 const CampingModal = () => {
     const phoneNumber = import.meta.env.VITE_NUMERO_CONTACTO_WPP
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
-    const imgList = [{ path: '/img/imagen1.webp' },{path: '/img/camping/camping1.webp'}, {path: '/img/camping/camping2.webp'}]
+    const imgList = [{ path: '/img/imagen1.webp' }, { path: '/img/camping/camping1.webp' }, { path: '/img/camping/camping2.webp' }]
     return (
         <PopUp btnDesc='Ver Más' title='Camping'>
             <article className='popChildContainer'>
@@ -27,12 +27,15 @@ const CampingModal = () => {
                 <h6 className='AdvertenciaCarta'>(*)Menores de 18 años deben ingresar acompañados por sus padres</h6>
                 <p className="porConsultas">
                     Por consultas de precios y reservas{" "}
-                    <span className="text-accent font-bold">
-                        <a href={whatsappUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Contactar por WhatsApp">contactese con nosotros.</a>
-                    </span>
+                    <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent font-bold hover:underline"
+                        aria-label="Contactar por WhatsApp"
+                    >
+                        contáctese con nosotros.
+                    </a>
                 </p>
             </article>
         </PopUp>

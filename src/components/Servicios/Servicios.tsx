@@ -1,14 +1,15 @@
-import React from "react";
+import { WifiIcon, PoolIcon, CampingIcon, CantineIcon, ParkingIcon, BathIcon, AccessIcon, GrillIcon } from '@/components';
+
 
 const servicios = [
-  { icon: "/icons/camping.svg", label: "Camping" },
-  { icon: "/icons/cantina.svg", label: "Cantina" },
-  { icon: "/icons/estacionamiento.svg", label: "Estacionamiento" },
-  { icon: "/icons/wifi.svg", label: "WiFi" },
-  { icon: "/icons/baños.svg", label: "Baños" },
-  { icon: "/icons/pileta.svg", label: "Pileta" },
-  { icon: "/icons/accesorio.svg", label: "Acceso al Río" },
-  { icon: "/icons/churrasqueras.svg", label: "Asadores" },
+  { icon: <CampingIcon color='#2d2851' />, label: "Camping" },
+  { icon: <CantineIcon color='#2d2851' />, label: "Cantina" },
+  { icon: <ParkingIcon color='#2d2851' />, label: "Estacionamiento" },
+  { icon: <WifiIcon color='#2d2851' />, label: "WiFi" },
+  { icon: <BathIcon color='#2d2851' />, label: "Baños" },
+  { icon: <PoolIcon color='#2d2851' />, label: "Pileta" },
+  { icon: <AccessIcon color='#2d2851' />, label: "Acceso al Río" },
+  { icon: <GrillIcon color='#2d2851' />, label: "Asadores" },
 ];
 
 export default function Servicios() {
@@ -19,11 +20,7 @@ export default function Servicios() {
       <div className="IconosContainer">
         {servicios.map((servicio, idx) => (
           <div key={idx} className="IconoServicio">
-            <img
-              src={servicio.icon}
-              alt={servicio.label}
-              className="IconoSvg"
-            />
+              {servicio.icon}
             <span className="DescripcionIcono">{servicio.label}</span>
           </div>
         ))}

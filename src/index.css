@@ -137,9 +137,25 @@ html {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    font-family: var(--font-sans);
-    @apply bg-background text-foreground;
+    @apply relative bg-background text-foreground overflow-hidden;
+  }
+
+  body::before {
+    @apply fixed inset-0 -z-10 bg-cover bg-center;
+    content: "";
+    background-image: url("/img/almabg.webp");
+    filter: blur(1px); /* ajustá el valor si querés más o menos desenfoque */
+  }
+
+  body[data-radix-scroll-lock="true"] {
+    padding-right: 0 !important;
+  }
+
+  main {
+    overflow-y: scroll;
+    height: 100dvh;
   }
 }
 
@@ -147,7 +163,7 @@ html {
 
 @layer utilities {
   .mainContainer {
-    @apply place-self-center bg-whitebg h-auto m-5  rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 md:max-w-2xl md:p-5 xl:max-w-5xl overflow-y-auto;
+    @apply place-self-center bg-whitebg max-h-[screen] m-5  rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 overflow-y-auto md:max-w-2xl md:p-5 xl:max-w-5xl;
   }
 
   /* NavBar */
@@ -229,44 +245,42 @@ html {
 
   /* UBICACION */
 
-  .Ubicacion-section{
-    @apply flex flex-row gap-12 w-full
+  .Ubicacion-section {
+    @apply flex flex-row gap-12 w-full;
   }
 
-  .Mapa{
-    @apply w-3/4 p-2 md:p-4
+  .Mapa {
+    @apply w-3/4 p-2 md:p-4;
   }
 
-  .Animacion-mapa{
-    @apply transition-transform duration-300 hover:scale-105 active:scale-105 touch-pan-y
+  .Animacion-mapa {
+    @apply transition-transform duration-300 hover:scale-105 active:scale-105 touch-pan-y;
   }
 
-  .Resenias{
-    @apply w-1/4 flex items-center justify-center p-2 md:p-4
-  }
-  
-
-  .Resenias-reviews{
-    @apply flex flex-col items-center p-4 hover:bg-gray-100 rounded-lg transition-colors
+  .Resenias {
+    @apply w-1/4 flex items-center justify-center p-2 md:p-4;
   }
 
-  .Icono-map{
-    @apply w-12 h-12 md:w-16 md:h-16
+  .Resenias-reviews {
+    @apply flex flex-col items-center p-4 hover:bg-gray-100 rounded-lg transition-colors;
   }
 
-  .Text-resenias{
-    @apply text-sm mt-2 md:text-base font-medium
+  .Icono-map {
+    @apply w-12 h-12 md:w-16 md:h-16;
   }
 
-  .Pulsacio-usuarios-moviles{
-    @apply text-xs text-center text-gray-400 mt-2 md:hidden
+  .Text-resenias {
+    @apply text-sm mt-2 md:text-base font-medium;
   }
 
- 
+  .Pulsacio-usuarios-moviles {
+    @apply text-xs text-center text-gray-400 mt-2 md:hidden;
+  }
+
   /* CANTINA */
   .CantinaContainer {
     font-family: var(--font-nunito);
-    @apply w-full flex flex-col items-center justify-center p-2.5 gap-2.5;
+    @apply w-full flex flex-col items-center justify-center p-2.5 gap-6;
   }
   .cantinaTetx {
     @apply text-[14px] md:text-[16px] xl:text-[18px];
@@ -291,55 +305,54 @@ html {
   }
 
   /*BOTON FLOTANTE WPP*/
-  .Boton-flotante{
+  .Boton-flotante {
     @apply fixed bottom-1 right-0 
-    z-50 flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300
+    z-50 flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300;
   }
 
-  .Icono-wpp{
-    @apply w-8 h-8 text-white
+  .Icono-wpp {
+    @apply w-8 h-8 text-white;
   }
 
   /*BOTON FLOTANTE DE CONTACTO*/
 
-  .Boton-flotante-contacto{
-    @apply fixed bottom-1 left-1/2 transform -translate-x-1/2 z-50
+  .Boton-flotante-contacto {
+    @apply fixed bottom-1 left-1/2 transform -translate-x-1/2 z-50;
   }
 
-  .Contenedor-degradado{
-    @apply bg-gradient-to-b from-white to-white/80 py-3 px-4 rounded-full shadow-lg
+  .Contenedor-degradado {
+    @apply bg-gradient-to-b from-white to-white/80 py-3 px-4 rounded-full shadow-lg;
   }
 
-  .Separacion-iconos{
-    @apply flex gap-3
+  .Separacion-iconos {
+    @apply flex gap-3;
   }
 
-  .Boton-instagram{
-    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  .Boton-instagram {
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300;
   }
 
-  .Boton-email{
-    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  .Boton-email {
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300;
   }
 
-  .Boton-telefono{
-    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300
+  .Boton-telefono {
+    @apply flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:bg-gray-100 transition-colors duration-300;
   }
 
   /* PopUp */
-  .popupContainer{
-    @apply place-self-center max-w-sm md:max-w-2xl xl:max-w-4xl
+  .popupContainer {
+    @apply place-self-center max-h-[90dvh] max-w-sm md:max-w-2xl xl:max-w-4xl;
   }
-  .popChildContainer{
-    @apply flex flex-col gap-2.5 items-center w-full overflow-y-auto
+  .popChildContainer {
+    @apply flex flex-col gap-6 items-center w-full overflow-y-auto;
   }
 
   /* iconspan */
-  .iconSpan{
-    @apply flex gap-2.5 items-center justify-start text-tertiary font-nunito
+  .iconSpan {
+    @apply flex gap-2.5 items-center justify-start text-tertiary font-nunito;
   }
-  .iconSize{
-    @apply size-6 md:size-8 xl:size-9
+  .iconSize {
+    @apply size-6 md:size-8 xl:size-9;
   }
-
 }
