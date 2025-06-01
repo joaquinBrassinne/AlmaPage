@@ -1,4 +1,3 @@
-import React from "react";
 import CarouselCard from "../CarouselCard/CarouselCard";
 import { cantinaImagenes } from "../../utils/const/cantinaimg";
 import { Button } from "../ui/button";
@@ -17,7 +16,7 @@ const Cantina = () => {
 
   return (
     <PopUp btnDesc="Ver Más" title="Nuestra Cantina">
-      <article className="w-full overflow-y-auto">
+      <article className="w-full">
         <CarouselCard imgList={cantinaImagenes} range={5000} />
         <div className="CantinaContainer">
           <div>
@@ -38,7 +37,7 @@ const Cantina = () => {
               Horario de atención de 8:00am a 00:00 pm
             </span>
 
-            <div>
+            <div className="hidden">
               {menuLink && (
                 <a href={menuLink} target="_blank" rel="noopener noreferrer">
                   <Button
@@ -51,7 +50,7 @@ const Cantina = () => {
               )}
             </div>
 
-            <div>
+            <div className="hidden">
               <p className="AdvertenciaCarta">
                 (*) La carta puede estar sujeta a modificaciones
               </p>
@@ -60,12 +59,15 @@ const Cantina = () => {
           <div>
             <p className="porConsultas">
               Por consultas de precios y reservas{" "}
-              <span className="text-accent font-bold">
-                <a href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Contactar por WhatsApp">contactese con nosotros.</a>
-              </span>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent font-bold hover:underline"
+                aria-label="Contactar por WhatsApp"
+              >
+                contáctese con nosotros.
+              </a>
             </p>
           </div>
         </div>

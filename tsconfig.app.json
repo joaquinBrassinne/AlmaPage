@@ -28,5 +28,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/components/Icons/AccessIcon.tsx", "src/components/Icons/BathIcon.tsx", "src/components/Icons/CampingIcon.tsx", "src/components/Icons/CantineIcon.tsx", "src/components/Icons/GrillIcon.tsx", "src/components/Icons/PoolIcon.tsx", "src/components/Icons/ParkingIcon.tsx", "src/components/Icons/WifiIcon.tsx"]
 }

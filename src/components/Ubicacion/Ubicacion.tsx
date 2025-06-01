@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Ubicacion = () => {
   // Estado para el efecto active/hover en el botón de reseñas
@@ -48,7 +48,6 @@ const Ubicacion = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             onLoad={() => setMapLoaded(true)}
-            className="Animacion-mapa"
           ></iframe>
         </div>
         
