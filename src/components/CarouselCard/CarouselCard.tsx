@@ -22,7 +22,7 @@ const CarouselCard = ({imgList, range}: Props) => {
               }),
             ]}
           >
-            <CarouselContent>
+            <CarouselContent className='hover:cursor-pointer'>
               {imgList.map(({ path }, index) => (
                 <CarouselItem key={index}>
                   <Card className="cardTransparent">

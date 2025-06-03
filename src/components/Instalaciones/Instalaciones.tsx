@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import CampingModal from "./CampingModal/CampingModal";
 import Cantina from "../Cantina/Cantina";
 
@@ -25,7 +25,7 @@ const instalacionesData: Instalacion[] = [
 const Instalaciones = () => {
   return (
     <section id="instalaciones" className="InstalacionesContainer">
-      <h1 className="Titulos">Instalaciones</h1>
+      <h2 className="Titulos">Instalaciones</h2>
       <div className="InstalacionesContainer">
         {instalacionesData.map((instalacion, index) => {
           const Componente = instalacion.comp;
