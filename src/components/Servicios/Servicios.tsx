@@ -1,15 +1,15 @@
-import React from "react";
-import { Tent, Utensils, CarFront , Wifi, Bath, Droplet, Waves, Flame } from "lucide-react";
+import { WifiIcon, PoolIcon, CampingIcon, CantineIcon, ParkingIcon, BathIcon, AccessIcon, GrillIcon } from '@/components';
+
 
 const servicios = [
-  { icon: Tent, label: "Camping" },
-  { icon: Utensils, label: "Cantina" },
-  { icon: CarFront , label: "Estacionamiento" },
-  { icon: Wifi, label: "WiFi" },
-  { icon: Bath, label: "Baños" },
-  { icon: Droplet, label: "Pileta" },
-  { icon: Waves, label: "Acceso al Río" },
-  { icon: Flame, label: "Asadores" },
+  { icon: <CampingIcon color='#2d2851' />, label: "Camping" },
+  { icon: <CantineIcon color='#2d2851' />, label: "Cantina" },
+  { icon: <ParkingIcon color='#2d2851' />, label: "Estacionamiento" },
+  { icon: <WifiIcon color='#2d2851' />, label: "WiFi" },
+  { icon: <BathIcon color='#2d2851' />, label: "Baños" },
+  { icon: <PoolIcon color='#2d2851' />, label: "Pileta" },
+  { icon: <AccessIcon color='#2d2851' />, label: "Acceso al Río" },
+  { icon: <GrillIcon color='#2d2851' />, label: "Asadores" },
 ];
 
 export default function Servicios() {
@@ -18,19 +18,12 @@ export default function Servicios() {
       <h2 className="Titulos">Servicios</h2>
 
       <div className="IconosContainer">
-        {servicios.map((servicio, idx) => {
-          const IconComponent = servicio.icon;
-          return (
-            <div key={idx} className="IconoServicio">
-              <IconComponent 
-                size={24} 
-                color="#000000" 
-                className="IconoSvg"
-              />
-              <span className="DescripcionIcono">{servicio.label}</span>
-            </div>
-          );
-        })}
+        {servicios.map((servicio, idx) => (
+          <div key={idx} className="IconoServicio">
+              {servicio.icon}
+            <span className="DescripcionIcono">{servicio.label}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

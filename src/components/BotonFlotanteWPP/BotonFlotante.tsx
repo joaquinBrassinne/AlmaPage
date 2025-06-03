@@ -1,5 +1,3 @@
-import React from 'react'
-
 function BotonFlotante() {
     const phoneNumber = import.meta.env.VITE_NUMERO_CONTACTO_WPP
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
