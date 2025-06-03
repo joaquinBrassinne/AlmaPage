@@ -1,4 +1,3 @@
-import React from 'react';
 
 const BotonFlotanteContact = () => {
   // Información de contacto (reemplazar con tus datos)
