@@ -8,15 +8,13 @@ import { Clock } from "lucide-react";
 const menuLink = import.meta.env.VITE_LINK_CANTINA;
 const phoneNumber = import.meta.env.VITE_NUMERO_CONTACTO_WPP
 const whatsappUrl = `https://wa.me/${phoneNumber}`;
-if (!menuLink) {
-  console.warn("⚠️ La variable de entorno VITE_LINK_CANTINA no está definida.");
-}
+
 
 const Cantina = () => {
 
   return (
     <PopUp btnDesc="Ver Más" title="Nuestra Cantina">
-      <article className="w-full">
+      <article className="w-full popChildContainer">
         <CarouselCard imgList={cantinaImagenes} range={5000} />
         <div className="CantinaContainer">
           <div>
