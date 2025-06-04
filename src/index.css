@@ -163,7 +163,7 @@ html {
 
 @layer utilities {
   .mainContainer {
-    @apply place-self-center bg-whitebg max-h-[screen] m-5  rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 overflow-y-auto md:max-w-2xl md:p-5 xl:max-w-5xl;
+    @apply place-self-center bg-whitebg max-h-[screen] m-5  rounded-[10px] flex flex-col items-center p-2.5 gap-2.5 overflow-y-auto md:max-w-2xl md:p-5 xl:max-w-3xl;
   }
 
   /* NavBar */
@@ -342,7 +342,7 @@ html {
 
   /* PopUp */
   .popupContainer {
-    @apply place-self-center max-h-[90dvh] max-w-sm md:max-w-2xl xl:max-w-4xl;
+    @apply mx-auto max-h-[90dvh] max-w-sm md:max-w-2xl xl:max-w-3xl;
   }
   .popChildContainer {
     @apply flex flex-col gap-6 items-center w-full overflow-y-auto;
